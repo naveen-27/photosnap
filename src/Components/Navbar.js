@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../images/shared/desktop/logo.svg";
 import Button from "./Button";
 import classes from "../Stylesheets/Navbar.module.css";
@@ -19,20 +20,34 @@ const Navbar = () => {
     window.addEventListener("resize", handleResize);
   });
 
+  const toggleNav = () => {
+    setIsMobileNavOpen(!isMobileNavOpen);
+  };
+
+  const links = (
+    <>
+      <li className={classes["nav-link"]} onClick={toggleNav}>
+        <Link to="/">home</Link>
+      </li>
+
+      <li className={classes["nav-link"]} onClick={toggleNav}>
+        <Link to="/stories">stories</Link>
+      </li>
+
+      <li className={classes["nav-link"]} onClick={toggleNav}>
+        <Link to="/features">features</Link>
+      </li>
+
+      <li className={classes["nav-link"]} onClick={toggleNav}>
+        <Link to="/pricing">pricing</Link>
+      </li>
+    </>
+  );
+
   const headerChildren = (
     <>
       <nav>
-        <ul className={classes["Nav-links"]}>
-          <li className={classes["nav-link"]}>
-            <a href="#a">stories</a>
-          </li>
-          <li className={classes["nav-link"]}>
-            <a href="#b">features</a>
-          </li>
-          <li className={classes["nav-link"]}>
-            <a href="#c">pricing</a>
-          </li>
-        </ul>
+        <ul className={classes["Nav-links"]}>{links}</ul>
       </nav>
 
       <Button label="get an invite" isLight={false} />
@@ -43,10 +58,7 @@ const Navbar = () => {
     <>
       <nav className={isMobileNavOpen ? classes["nav-open"] : ""}>
         <ul className={classes["Nav-links"]}>
-          <li className={classes["nav-link"]}>stories</li>
-          <li className={classes["nav-link"]}>features</li>
-          <li className={classes["nav-link"]}>pricing</li>
-
+          {links}
           <Button label="get an invite" isLight={false} />
         </ul>
       </nav>
@@ -59,10 +71,7 @@ const Navbar = () => {
       {deviceWidth > 750 ? headerChildren : null}
       {deviceWidth <= 750 ? mobileNav : null}
       {deviceWidth <= 750 ? (
-        <div
-          onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
-          style={{ padding: "0.5rem 0" }}
-        >
+        <div onClick={toggleNav} style={{ padding: "0.5rem 0" }}>
           <div
             className={`${
               isMobileNavOpen

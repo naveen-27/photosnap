@@ -12,8 +12,9 @@
     #5a77ff 83.33%
   );
   --black: #000;
-  --grey: #dfdfdf;
+  --grey: #b8b8b8;
   --white: #fff;
+  --dark-grey: #4e4e4e;
 }
 
 body {

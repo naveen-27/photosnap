@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   height: 72px;
-  padding: 0 12rem;
+  padding: 0 11rem;
   font-weight: 700;
   background-color: var(--white);
   transition: padding 200ms ease-in-out;
@@ -11,7 +11,7 @@
 
 .Nav-links {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   text-transform: uppercase;
   list-style: none;
 }
@@ -47,6 +47,7 @@
   height: 2.5px;
   background-color: var(--black);
   border-radius: 5px;
+  cursor: pointer;
   position: relative;
 }
 
@@ -94,7 +95,7 @@
   }
 
   .Nav-links {
-    gap: 1.75rem;
+    gap: 1rem;
   }
 }
 
@@ -103,7 +104,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
     padding: 0 2rem 1rem 2rem;
   }
 
@@ -116,6 +116,7 @@
     max-height: 0px;
     overflow-y: hidden;
     transition: max-height 500ms cubic-bezier(1, -0.03, 0, 1.09);
+    z-index: 2;
   }
 
   .nav-open {

@@ -1,0 +1,86 @@
+.Action {
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.dark {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.Action > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15%;
+  position: relative;
+}
+
+.Action > div::before {
+  content: "";
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: var(--prm-gradient);
+}
+
+.head {
+  letter-spacing: 3px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+}
+
+.muted-text {
+  margin-top: 1.5rem;
+  line-height: 1.65;
+  font-weight: 500;
+}
+
+.muted-dark {
+  color: var(--grey);
+}
+
+.muted-light {
+  color: var(--dark-grey);
+}
+
+.Action-Cta {
+  align-self: flex-start;
+  margin-top: 2.5rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.Action-Cta > svg {
+  margin-left: 2.5rem;
+  transform: translateY(4px);
+  transition: transform 150ms ease;
+}
+
+.Action-Cta:hover {
+  text-decoration: underline;
+}
+
+.Action-Cta:hover > svg {
+  transform: translate(-30px, 4px);
+}
+
+@media (max-width: 750px) {
+  .Action > div {
+    padding: 3rem 2rem;
+  }
+
+  .Action > div::before {
+    left: 20%;
+    width: 60%;
+    height: 10px;
+  }
+}

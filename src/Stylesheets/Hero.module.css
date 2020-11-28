@@ -1,0 +1,28 @@
+.Hero {
+  display: flex;
+  height: min(calc(100vh - 72px), 650px);
+}
+
+.Hero-img {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 750px) {
+  .Hero {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+
+  .Hero-img {
+    width: 100%;
+    height: max(250px, 50vh);
+  }
+}

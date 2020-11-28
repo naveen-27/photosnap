@@ -1,0 +1,32 @@
+.Btn {
+  padding: 0.65rem 2rem;
+  transition: background-color 350ms ease, transform 200ms;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+  border: none;
+}
+
+.Btn:active {
+  transform: translateY(5%);
+}
+
+.light {
+  color: var(--black);
+  background-color: var(--grey);
+}
+
+.light:hover {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.dark {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.dark:hover {
+  color: var(--black);
+  background-color: var(--grey);
+}

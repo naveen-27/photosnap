@@ -20,3 +20,27 @@
 body {
   font-family: "DM Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.prm-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--white);
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.prm-btn > svg {
+  margin-left: 2rem;
+  transform: translateY(4px);
+  transition: transform 200ms ease;
+}
+
+.prm-btn:hover {
+  text-decoration: underline;
+}
+
+.prm-btn:hover > svg {
+  transform: translate(-1.5rem, 4px);
+}

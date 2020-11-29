@@ -1,0 +1,12 @@
+.Social-links {
+  grid-area: social;
+}
+
+.Social-links svg + svg {
+  margin-left: 1rem;
+}
+
+.Social-links > svg:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}

@@ -5,6 +5,7 @@ import Home from "./Components/Routes/Home";
 import Stories from "./Components/Routes/Stories";
 import Features from "./Components/Routes/Features";
 import Pricing from "./Components/Routes/Pricing";
+import Footer from "./Components/Footer";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/pricing" exact component={Pricing} />
         </Switch>
       </div>
+      <Footer />
     </div>
   );
 };

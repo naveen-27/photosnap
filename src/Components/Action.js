@@ -4,7 +4,7 @@ import { ReactComponent as Goto } from "../images/shared/desktop/arrow.svg";
 import classes from "../Stylesheets/Action.module.css";
 
 const Action = (props) => {
-  const darkThemeClass = props.dark ? classes.dark : null;
+  const darkThemeClass = props.dark ? classes.dark : "";
   const mutedTextColor = props.dark
     ? classes["muted-dark"]
     : classes["muted-light"];

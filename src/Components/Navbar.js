@@ -80,7 +80,9 @@ const Navbar = () => {
             }`}
           ></div>
         </div>
-      ) : null}
+      ) : (
+        ""
+      )}
     </header>
   );
 };

@@ -1,9 +1,16 @@
 import React from "react";
+import PricingHero from "../PricingHero";
+import Banner from "../Banner";
 
 const Pricing = () => {
   document.title = "Photosnap - Pricing";
 
-  return <h1>Pricing</h1>;
+  return (
+    <>
+      <PricingHero />
+      <Banner />
+    </>
+  );
 };
 
 export default Pricing;

@@ -7,7 +7,7 @@ const Hero = (props) => {
   const isHeroOdd = props.heroNo % 2 === 1;
   const isMobile = window.innerWidth <= 750;
 
-  const reverseClass = isHeroOdd && !isMobile ? classes.reverse : null;
+  const reverseClass = isHeroOdd && !isMobile ? classes.reverse : "";
 
   return (
     <div className={`${classes.Hero} ${reverseClass}`}>

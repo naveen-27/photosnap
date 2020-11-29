@@ -1,6 +1,5 @@
 import React from "react";
 import Action from "./Action";
-import chooseImageHome from "../Utils/HomeImages";
 import classes from "../Stylesheets/Hero.module.css";
 
 const Hero = (props) => {
@@ -11,11 +10,11 @@ const Hero = (props) => {
 
   return (
     <div className={`${classes.Hero} ${reverseClass}`}>
-      <Action content={props.descText} dark={props.heroNo === 0} />
+      <Action content={props.descText} dark={props.isDark} />
 
       <div
         className={classes["Hero-img"]}
-        style={{ backgroundImage: `url(${chooseImageHome()[props.heroNo]})` }}
+        style={{ backgroundImage: `url(${props.img})` }}
       ></div>
     </div>
   );

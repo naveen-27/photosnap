@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "./Hero";
+import chooseImageHome from "../Utils/HomeImages";
 
 const descTexts = [
   {
@@ -26,7 +27,13 @@ const HeroConatiner = () => {
   return (
     <div>
       {descTexts.map((descText, idx) => (
-        <Hero descText={descText} heroNo={idx} key={idx} />
+        <Hero
+          descText={descText}
+          heroNo={idx}
+          key={idx}
+          isDark={idx === 0}
+          img={chooseImageHome()[idx]}
+        />
       ))}
     </div>
   );

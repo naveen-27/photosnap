@@ -1,5 +1,6 @@
 import React from "react";
 import HeroContainer from "../HeroContainer";
+import FeaturesContainer from "../FeaturesContainer";
 
 const Home = () => {
   document.title = "Photosnap - Home";
@@ -7,6 +8,7 @@ const Home = () => {
   return (
     <>
       <HeroContainer />
+      <FeaturesContainer isHome={true} />
     </>
   );
 };

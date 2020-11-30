@@ -1,6 +1,6 @@
 .Hero {
   display: flex;
-  height: max(calc(100vh - 72px), 700px);
+  min-height: 670px;
 }
 
 .Hero-img {

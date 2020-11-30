@@ -1,0 +1,131 @@
+.Card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "plan"
+    "desc"
+    "price"
+    "btn";
+  width: min(350px, 100%);
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: rgb(236, 236, 236);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.Card + .Card {
+  margin: 0 0 0 2rem;
+}
+
+.Card-dark {
+  padding: 6rem 2rem;
+  background-color: var(--black);
+  color: var(--white);
+  position: relative;
+}
+
+.Card-dark::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-image: var(--prm-gradient);
+}
+
+.plan {
+  grid-area: plan;
+  letter-spacing: 2.25px;
+}
+
+.muted-text {
+  grid-area: desc;
+  color: var(--dark-grey);
+  margin: 1.5rem 0 2rem 0;
+}
+
+.muted-text-dark {
+  color: var(--grey);
+  margin: 3rem 0;
+}
+
+.price {
+  grid-area: price;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1100px) {
+  .Card {
+    padding: 2rem;
+    width: 100%;
+    grid-template-columns: min(70%, 400px) 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas:
+      "plan price"
+      "desc price"
+      "btn price";
+    text-align: left;
+  }
+
+  .Card + .Card {
+    margin: 2rem 0 0 0;
+  }
+
+  .muted-text-dark {
+    margin: 1.5rem 0 2rem 0;
+  }
+
+  .muted-text {
+    width: 70%;
+  }
+
+  .price {
+    justify-self: end;
+  }
+
+  .Card-dark::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 6px;
+    background-image: var(--prm-gradient);
+  }
+}
+
+@media (max-width: 750px) {
+  .Card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "plan"
+      "desc"
+      "price"
+      "btn";
+    width: min(350px, 100%);
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+
+  .muted-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .price {
+    justify-self: center;
+  }
+
+  .Card-dark::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-image: var(--prm-gradient);
+  }
+}

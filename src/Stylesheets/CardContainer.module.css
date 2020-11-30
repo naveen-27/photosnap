@@ -1,0 +1,79 @@
+.CardContainer {
+  margin: 4rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Plans {
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.duration-toggle {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.toggle-base {
+  width: 90px;
+  height: 50px;
+  padding: 5px;
+  background-color: var(--grey);
+  border-radius: 30px;
+  margin: 0 1rem;
+}
+
+.toggle {
+  width: 40px;
+  height: 40px;
+  background-color: var(--black);
+  border-radius: 50%;
+  transition: transform 200ms linear;
+  cursor: pointer;
+}
+
+.toggle-left {
+  transform: translateX(0);
+}
+
+.toggle-right {
+  transform: translateX(100%);
+}
+
+.duration {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark-grey);
+}
+
+.active {
+  color: var(--black);
+}
+
+@media (max-width: 1100px) {
+  .Plans {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 750px) {
+  .duration {
+    font-size: 1rem;
+  }
+
+  .toggle-base {
+    height: 30px;
+    width: 56px;
+    padding: 2px;
+    margin: 0 0.5rem;
+  }
+
+  .toggle {
+    height: 26px;
+    width: 26px;
+  }
+}

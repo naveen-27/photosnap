@@ -6,25 +6,32 @@ import { ReactComponent as ArrowLight } from "../images/shared/desktop/arrow-whi
 import classes from "../Stylesheets/Footer.module.css";
 
 const Footer = () => {
+  const scrollTop = () => {
+    window.scroll({
+      top: 0,
+      left: 0,
+    });
+  };
+
   return (
     <footer className={classes.Footer}>
       <div className={classes["Footer-main"]}>
         <LogoLight />
 
         <ul className={classes["Footer-links"]}>
-          <li className={classes["footer-link"]}>
+          <li className={classes["footer-link"]} onClick={scrollTop}>
             <Link to="/">home</Link>
           </li>
 
-          <li className={classes["footer-link"]}>
+          <li className={classes["footer-link"]} onClick={scrollTop}>
             <Link to="/stories">stories</Link>
           </li>
 
-          <li className={classes["footer-link"]}>
+          <li className={classes["footer-link"]} onClick={scrollTop}>
             <Link to="/features">features</Link>
           </li>
 
-          <li className={classes["footer-link"]}>
+          <li className={classes["footer-link"]} onClick={scrollTop}>
             <Link to="/pricing">pricing</Link>
           </li>
         </ul>

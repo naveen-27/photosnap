@@ -5,8 +5,9 @@ This multi-page application [Photosnap](https://photosnap-kohl.vercel.app/) is a
 ## MADE WITH
 
 1. ReactJS
-2. HTML5
-3. CSS3
+2. React-Router (For inner routing of pages)
+3. HTML5
+4. CSS3
 
 ## DESIGN
 

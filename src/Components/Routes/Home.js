@@ -1,5 +1,6 @@
 import React from "react";
 import HeroContainer from "../HeroContainer";
+import StoriesGrid from "../StoriesGrid";
 import FeaturesContainer from "../FeaturesContainer";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
   return (
     <>
       <HeroContainer />
+      <StoriesGrid isHome={true} />
       <FeaturesContainer isHome={true} />
     </>
   );

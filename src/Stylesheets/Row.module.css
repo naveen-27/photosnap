@@ -1,0 +1,53 @@
+.Row {
+  display: flex;
+  padding: 1.25rem 0.5rem;
+  border-bottom: 2px solid var(--grey);
+}
+
+.Row-feature {
+  width: 60%;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.plans-inclusion {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.feature-available {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plan {
+  font-size: 0.65rem;
+  color: var(--dark-grey);
+  margin-bottom: 0.5rem;
+}
+
+.Row:last-of-type {
+  border-bottom: 3px solid var(--black);
+}
+
+@media (max-width: 750px) {
+  .Row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Row > * {
+    width: 100%;
+    text-align: center;
+  }
+
+  .plans-inclusion {
+    margin-top: 1rem;
+  }
+
+  .Row-feature {
+    font-size: 1rem;
+  }
+}

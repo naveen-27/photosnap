@@ -1,6 +1,6 @@
 .Hero {
   display: flex;
-  min-height: 670px;
+  height: min(calc(100vh - 72px), 700px);
 }
 
 .Hero-img {
@@ -13,6 +13,12 @@
 
 .reverse {
   flex-direction: row-reverse;
+}
+
+@media (max-height: 500px) {
+  .Hero {
+    height: 650px;
+  }
 }
 
 @media (max-width: 750px) {

@@ -11,6 +11,8 @@ const Footer = () => {
       top: 0,
       left: 0,
     });
+
+    document.querySelector("button#focus-establish").focus();
   };
 
   return (

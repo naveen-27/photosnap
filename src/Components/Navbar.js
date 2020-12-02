@@ -21,25 +21,46 @@ const Navbar = () => {
   });
 
   const toggleNav = () => {
+    document.querySelector("button#focus-establish").focus();
     setIsMobileNavOpen(!isMobileNavOpen);
   };
 
   const links = (
     <>
       <li className={classes["nav-link"]} onClick={toggleNav}>
-        <Link to="/">home</Link>
+        <Link
+          to="/"
+          tabIndex={isMobileNavOpen ? 0 : deviceWidth > 750 ? 0 : -1}
+        >
+          home
+        </Link>
       </li>
 
       <li className={classes["nav-link"]} onClick={toggleNav}>
-        <Link to="/stories">stories</Link>
+        <Link
+          to="/stories"
+          tabIndex={isMobileNavOpen ? 0 : deviceWidth > 750 ? 0 : -1}
+        >
+          stories
+        </Link>
       </li>
 
       <li className={classes["nav-link"]} onClick={toggleNav}>
-        <Link to="/features">features</Link>
+        <Link
+          to="/features"
+          tabIndex={isMobileNavOpen ? 0 : deviceWidth > 750 ? 0 : -1}
+        >
+          features
+        </Link>
       </li>
 
       <li className={classes["nav-link"]} onClick={toggleNav}>
-        <Link to="/pricing">pricing</Link>
+        <Link
+          to="/pricing"
+          tabIndex={isMobileNavOpen ? 0 : deviceWidth > 750 ? 0 : -1}
+        >
+          pricing
+        </Link>
       </li>
     </>
   );
@@ -59,7 +80,12 @@ const Navbar = () => {
       <nav className={isMobileNavOpen ? classes["nav-open"] : ""}>
         <ul className={classes["Nav-links"]}>
           {links}
-          <Button label="get an invite" isLight={false} />
+
+          <Button
+            label="get an invite"
+            isLight={false}
+            tabIndex={deviceWidth <= 750 && isMobileNavOpen ? 0 : -1}
+          />
         </ul>
       </nav>
     </>

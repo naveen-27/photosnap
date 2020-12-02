@@ -41,10 +41,18 @@ body {
   transition: transform 200ms ease;
 }
 
-.prm-btn:hover {
+.prm-btn:hover,
+.prm-btn:focus {
   text-decoration: underline;
 }
 
-.prm-btn:hover > svg {
+.prm-btn:hover > svg,
+.prm-btn:focus > svg {
   transform: translate(-1.5rem, 4px);
+}
+
+#focus-establish {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
 }

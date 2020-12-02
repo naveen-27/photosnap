@@ -29,9 +29,20 @@ const priceByPlan = [
 const CardContainer = () => {
   const [planDuration, setPlanDuration] = useState("monthly");
 
-  const toggleSubscriptionPeriod = () => {
-    const duration = planDuration === "monthly" ? "yearly" : "monthly";
-    setPlanDuration(duration);
+  const toggleSubscriptionPeriod = (evt) => {
+    let duration;
+
+    if (evt.type === "click") {
+      duration = planDuration === "monthly" ? "yearly" : "monthly";
+    } else if (evt.keyCode === 39 && planDuration === "monthly") {
+      duration = "yearly";
+    } else if (evt.keyCode === 37 && planDuration === "yearly") {
+      duration = "monthly";
+    } else if (evt.keyCode === 27) {
+      evt.target.blur();
+    }
+
+    if (duration !== undefined) setPlanDuration(duration);
   };
 
   const toggleSide =
@@ -41,7 +52,11 @@ const CardContainer = () => {
 
   return (
     <div className={classes.CardContainer}>
-      <div className={classes["duration-toggle"]}>
+      <div
+        className={classes["duration-toggle"]}
+        tabIndex={0}
+        onKeyDown={(evt) => toggleSubscriptionPeriod(evt)}
+      >
         <div
           className={`${classes.duration} ${
             planDuration === "monthly" && classes.active
@@ -53,7 +68,7 @@ const CardContainer = () => {
         <div className={classes["toggle-base"]}>
           <div
             className={`${classes.toggle} ${toggleSide}`}
-            onClick={toggleSubscriptionPeriod}
+            onClick={(evt) => toggleSubscriptionPeriod(evt)}
           ></div>
         </div>
 

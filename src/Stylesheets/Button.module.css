@@ -16,7 +16,8 @@
   background-color: var(--grey);
 }
 
-.light:hover {
+.light:hover,
+.light:focus {
   color: var(--white);
   background-color: var(--black);
 }
@@ -26,7 +27,8 @@
   background-color: var(--black);
 }
 
-.dark:hover {
+.dark:hover,
+.dark:focus {
   color: var(--black);
   background-color: var(--grey);
 }

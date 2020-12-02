@@ -10,6 +10,11 @@
   color: var(--white);
 }
 
+button.dark:focus {
+  border: 2px solid var(--white);
+  border-radius: 5px;
+}
+
 .Action > div {
   display: flex;
   flex-direction: column;
@@ -51,6 +56,7 @@
 .Action-Cta {
   align-self: flex-start;
   margin-top: 2.5rem;
+  padding: 0.25rem 0;
   outline: none;
   border: none;
   background-color: transparent;
@@ -64,11 +70,18 @@
   transition: transform 150ms ease;
 }
 
-.Action-Cta:hover {
+.Action-Cta:focus {
+  outline: 2px solid var(--black);
+  border-radius: 5px;
+}
+
+.Action-Cta:hover,
+.Action-Cta:focus {
   text-decoration: underline;
 }
 
-.Action-Cta:hover > svg {
+.Action-Cta:hover > svg,
+.Action-Cta:focus > svg {
   transform: translate(-30px, 4px);
 }
 

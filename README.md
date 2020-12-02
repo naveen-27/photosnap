@@ -16,7 +16,7 @@ This multi-page application [Photosnap](https://photosnap-kohl.vercel.app/) is a
 ## TO RUN LOCALLY
 
 1. Install create-react-app CLI
-1. Clone the repository - run `git clone https://github.com/naveen-27/manage-homepage.git`
+1. Clone the repository - run `git clone https://github.com/naveen-27/photosnap.git`
 1. Run `npm install`
 1. Then run `npm start`
 1. Goto `localhost:3000` to view to app

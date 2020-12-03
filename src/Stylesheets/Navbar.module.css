@@ -24,9 +24,10 @@
 .nav-link > a {
   color: var(--black);
   text-decoration: none;
+  outline: none;
 }
 
-.nav-link::after {
+.nav-link > a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -37,8 +38,8 @@
   transition: height 200ms ease;
 }
 
-.nav-link:hover::after,
-.nav-link:focus::after {
+.nav-link > a:hover::after,
+.nav-link > a:focus::after {
   height: 6px;
 }
 

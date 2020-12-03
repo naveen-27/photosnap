@@ -5,6 +5,7 @@
   font-weight: 500;
   letter-spacing: 2px;
   border: none;
+  outline: none;
 }
 
 .Btn:active {

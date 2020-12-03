@@ -10,11 +10,6 @@
   color: var(--white);
 }
 
-button.dark:focus {
-  border: 2px solid var(--white);
-  border-radius: 5px;
-}
-
 .Action > div {
   display: flex;
   flex-direction: column;
@@ -68,11 +63,6 @@ button.dark:focus {
   margin-left: 2.5rem;
   transform: translateY(4px);
   transition: transform 150ms ease;
-}
-
-.Action-Cta:focus {
-  outline: 2px solid var(--black);
-  border-radius: 5px;
 }
 
 .Action-Cta:hover,

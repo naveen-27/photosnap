@@ -12,14 +12,29 @@
   text-transform: uppercase;
 }
 
-.footer-link > a:hover {
-  color: var(--grey);
-}
-
 .footer-link > a {
   text-decoration: none;
   font-weight: 500;
   color: var(--white);
+  position: relative;
+  outline: none;
+}
+
+.footer-link > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background-image: var(--prm-gradient);
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.footer-link > a:hover::after,
+.footer-link > a:focus::after {
+  opacity: 1;
 }
 
 .Footer-main {
